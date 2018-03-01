@@ -8,3 +8,14 @@ button {color:rgb(244,172,205)}
 h2{color: rgb(255,237,0)}
 h2{font-size: 30px}
 h2{font-family: 'Diplomata SC', cursive;}
+
+.resultSection{
+height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 100px;
+font-family:'Diplomata SC', cursive;
+color: rgb(255,237,0);
+blinking;
+}

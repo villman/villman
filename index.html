@@ -8,15 +8,40 @@
 </head>
   <body>
     <h1>DEBIT CREDIT THEORY</h1>
-    <div>
-      <div>
-         <input placeholder="what do you want ot know?"></input>
-      </div>
-    <button> add</button>
+    <div class="inputSection">
+      <div class="inputs">
+         <input placeholder="what do you want to know?"></input>
     </div>
-    <button>go!</button>
+    <button class="addOption">Add</button>
+    </div>
+    <div class="resultSection"></div>
+    <button class="submit">go!</button>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script>
+  $(function() {
+    $('.resultSection').hide()
+
+    var add_option = function() {
+      $('.inputs').append('<input></input>')
+    }
+    $('.addOption').click(add_option)
+
+var options = []
+var submit = function() {
+$('.inputSection').hide()
+$('.resultSection').css('display', 'flex')
+$('input').each(function() {
+options.push($(this).val())
+})
+var winner = options[Math.floor(Math.random() * options.length)]
+console.log(winner)
+$('.resultSection').text(winner)
+}
+    $('.submit').click(submit)
+  })
+ </script>
   </body>
-  <div>
 <h2>
   Have you always been searching for that page that can help you out with the debit and the credit?
     You can stop the search! The help is here!
